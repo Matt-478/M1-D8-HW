@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1 onclick="changeTitle()">This is the title of the page</h1>
+      <h1>This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </header>
 
@@ -49,12 +49,13 @@
 
     <script>
       let theTitle = document.querySelector("header h1")
+
       /* EXERCISE 1
       Write a function for changing the title of the document in something else.
       */
 
       const changeTitle = function (newTitle) {
-        theTitle.innerHTML="This is the new title of the page"
+        theTitle.onclick.innerHTML="This is the new title of the page"
       };
 
       /* EXERCISE 2
@@ -62,23 +63,23 @@
       */
 
       const addClassToTitle = function () {
-        //
-      };
+        theTitle.onclick.classList.add("myHeading")
+            };
 
       /* EXERCISE 3
       Write a function for changing the text of only the p which are children of a div.
       */
 
       const changePcontent = function () {
-        //
-      };
+          };
 
       /* EXERCISE 4
       Write a function for changing the destination of every link to https://www.google.com
       */
 
+      let everyLink = document.querySelectorAll("a")
       const changeUrls = function () {
-        //
+        everyLink.href = "https://www.google.com"
       };
 
       /* EXERCISE 5
@@ -86,15 +87,20 @@
        */
 
       const addToTheSecond = function (content) {
-        //
-      };
+        let newListAdded = document.querySelector(".secondList")
+        let newItem = document.createElement("li")
+        newListAdded.appendChild(newItem)
+            };
 
       /* EXERCISE 6
       Write a function for adding a second paragraph to the div.
       */
 
+
       const addParagraph = function (content) {
-        //
+        let myParagraph = document.createElement("p")
+        let myParagraph.innerText = "A new paragraph"
+        document.querySelector("div").append(myParagraph)
       };
 
       /* EXERCISE 7
